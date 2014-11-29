@@ -1,0 +1,15 @@
+<!-- jspf(jsp fragment)，內容是單純的HTML -->
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Power of Servlet and JSP</title>
+</head>
+<body>
+	<table>
+		<tr>
+			<td>
+				<h2>Power of Servlet and JSP</h2>
+				<h2>Servlet與JSP的力量(許功蓋)</h2>
+				<hr />

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/jsee/web-jsptagLibrary_2_0.xsd" version="2.0">  
+<!-- tld檔(tag library descriptor)，與web.xml、HelloTag.java有關，開啟tagLig_HelloMyTag.jsp測試 -->	
+	<tlibversion>1.1</tlibversion>
+	<tag>
+		<description>Outputs Hello, name!</description>
+		<name>hello</name>
+		<tag-class>taglib.HelloTag</tag-class><!-- 檔案在/Java Resources/src/taglib/HelloTag.java -->
+		<body-content>empty</body-content><!-- 使用此標記時，主體內容不可以有任何資料 -->
+		<attribute>
+			<name>name</name>
+			<required>false</required><!-- 不是必要屬性 -->
+			<rtexprvalue>true</rtexprvalue><!-- 可以在需求時期指定其值 -->
+		</attribute>
+	</tag>
+	<tag>
+		<description>Get maximum for SimpleTagSupport</description>
+		<name>getSimpleMax</name>
+		<tag-class>taglib.MaximumSimpleTag</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<name>x</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>y</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+	<tag>
+		<description>repeat 'n' times to change size</description>
+		<name>changeSize</name>
+		<tag-class>taglib.ChangeSizeTag</tag-class>
+		<body-content>scriptless</body-content><!-- scriptless代表只能接受樣板文字、EL運算式、JSP的Action Element，不可以有JSP sciptlet -->
+		<variable><!-- 輸出值 -->
+			<description>enlarged size (1 to num)</description>
+			<name-given>size</name-given>
+		</variable>
+		<attribute><!-- 輸入值 -->
+			<name>num</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+	<!-- 以下四個function對應到/el/elFunction.java的功能，是為了達到expression language的函數功能 -->
+	<function>
+		<name>uCase</name>
+		<function-class>el.elFunction</function-class>
+		<function-signature>
+			java.lang.String uCase(java.lang.String)
+		</function-signature>
+	</function>
+	<function>
+		<name>lCase</name>
+		<function-class>el.elFunction</function-class>
+		<function-signature>
+			java.lang.String lCase(java.lang.String)
+		</function-signature>
+	</function>
+	<function>
+		<name>contain</name>
+		<function-class>el.elFunction</function-class>
+		<function-signature>
+			java.lang.Boolean contain(java.lang.String, java.lang.String)
+		</function-signature>
+	</function>
+	<function>
+		<name>reverse</name>
+		<function-class>el.elFunction</function-class>
+		<function-signature>
+			java.lang.String reverse(java.lang.String)
+		</function-signature>
+	</function>
+</taglib>

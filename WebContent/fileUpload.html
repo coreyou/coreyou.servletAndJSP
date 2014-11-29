@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<!-- 連動FileUploadServlet.java -->
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>上傳檔案</title>
+	</head>
+	<body>
+		<form action="FileUploadServlet" method="post" enctype="multipart/form-data">
+		<fieldset>
+			<legend>上傳檔案</legend>
+			<label>上傳檔案一: <input type="file" name="file1" class="text"></label><br />
+			<label>上傳檔案二: <input type="file" name="file2" class="text"></label><br />
+			<label>上傳檔案說明一: <input type="text" name="description1" class="text"></label><br />
+			<label>上傳檔案說明二: <input type="text" name="description2" class="text"></label><br />
+			<label><input type="submit" value="上傳檔案.." class="button"></label>
+		</fieldset>
+		</form>
+	</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!-- 連動至tagLig_JSTLTesting.jsp -->
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>標準標記 - 使用JSTL</title>
+	</head>
+	<body>
+		<form action="tagLig_JSTLTesting.jsp" method="post">
+			<h2>單選鈕與核取方塊</h2>
+			<p>
+				性別: <!-- 預設為男 -->
+				<input type="radio" name="sex" value="male" checked >男
+				<input type="radio" name="sex" value="female" >女
+				<input type="radio" name="sex" value="none" >中性
+			</p>
+			<p>
+				<input type="checkbox" name="sport" value="Baseball" >Baseball
+				<input type="checkbox" name="sport" value="BasketBall" >BasketBall
+				<input type="checkbox" name="sport" value="Tennis" >Tennis
+				<input type="checkbox" name="sport" value="Soccer" >Soccer
+				<input type="checkbox" name="sport" value="Badminton" >Badminton
+				<input type="checkbox" name="sport" value="Jog" >Jog
+			</p>
+			<hr />
+			<p>
+				<input type="submit" value="送 出" >
+				<input type="reset" value="清 除" >
+			</p>			
+		</form>
+	</body>
+</html>

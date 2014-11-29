@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!-- 連動PictureVerifyServlet.java -->
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>產生圖片驗證碼</title>
+		<script type="text/javascript">
+			function reloadImage() {
+				document.getElementById("btn").disabled = true;
+				document.getElementById("identity").src='PictureVerifyServlet/execute?ts=' + new Date().getTime();
+			}
+		</script>
+	</head>
+	<body>
+		<h2>測試圖片驗證碼</h2>
+		<p>
+			<img src="PictureVerifyServlet/execute" id="identity" onload="btn.disabled = false;"/><!-- 這裡的src指向在web.xml中設定的url-pattern -->
+			<input type="button" value="換個圖片" onclick="reloadImage()" id="btn">
+		</p>
+		<form name="verifyCode" action="PictureVerifyServlet/execute" id="verifyCode" method="post">
+			<input type="text" name="insertCode" id="insertCode" value="請輸入圖片中文字" >
+			<input type="submit" value="送出">
+		</form>
+	</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Client Data Verify</title>
+		<script language="JavaScript">			
+				function dataCheck() {
+					var failVerify = false;
+					var failVerifyNickname = false;
+					var failVerifyEmail = false;
+					var nickname = document.nameAndEmail.nickname.value;
+					var email = document.nameAndEmail.email.value;
+					
+					if(nickname.length <= 4) {
+						focusto(0);
+						failVerify = true;
+						failVerifyNickname = true;
+					} else if(email.indexOf("@", 0) < 0) {
+						focusto(1);
+						failVerify = true;
+						failVerifyEmail = true;
+					}
+					
+					if(failVerify == false) {
+						document.nameAndEmail.submit();
+					} else if(failVerifyNickname) {
+						window.alert("名字不得小於5字元");
+					} else if(failVerifyEmail) {
+						window.alert("EMAIL不得為空，且EMAIL必須包含@");
+					} else {
+						window.alert("未知問題發生");
+					}
+				}
+			
+				function focusto(x) {
+					// 將游標定位於某表單的某欄位
+					document.forms[0].elements[x].focus();
+				}		
+		</script>
+	</head>
+	<body>
+		<form action="clientDataVerify.jsp" method="post" name="nameAndEmail">
+			名字: <input type="text" name="nickname" /><br />
+			EMAIL: <input type="text" name="email" /><br />
+			備註: <textarea name="note" row="6" cols="62"></textarea><br />
+			<hr />
+			<input type="button" value="檢查" onclick="dataCheck()" />
+			<input type="reset" value="重新輸入" />
+		</form>	
+	</body>
+</html>

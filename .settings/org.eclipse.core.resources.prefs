@@ -1,0 +1,13 @@
+eclipse.preferences.version=1
+encoding//WebContent/WEB-INF/LittleView.jsp=UTF-8
+encoding//WebContent/WEB-INF/jspf/coda.jspf=UTF-8
+encoding//WebContent/WEB-INF/jspf/prelude.jspf=UTF-8
+encoding//WebContent/WEB-INF/tags=UTF-8
+encoding//WebContent/WEB-INF/tags/footer.tag=UTF-8
+encoding//WebContent/WEB-INF/tags/header.tag=UTF-8
+encoding//WebContent/actionElements.jsp=UTF-8
+encoding//WebContent/directiveElements.jsp=UTF-8
+encoding//WebContent/el_expressLanguage.jsp=UTF-8
+encoding//WebContent/el_expressLanguageBean.jsp=UTF-8
+encoding//WebContent/helloWorldJSP.html=UTF-8
+encoding//WebContent/tagFile_headerFooter.jsp=UTF-8
