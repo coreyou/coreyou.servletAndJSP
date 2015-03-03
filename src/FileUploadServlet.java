@@ -94,8 +94,8 @@ public class FileUploadServlet extends HttpServlet {
         String uploadPath = getServletContext().getRealPath("") + File.separator + UPLOAD_DIRECTORY;
         
         File uploadDir = new File(uploadPath);
-        if (!uploadDir.exists()) {
-            uploadDir.mkdir();
+        if (!uploadDir.exists()) {	// 資料夾不存在
+            uploadDir.mkdir();	// 建資料夾
         }               
         
 		response.setCharacterEncoding("UTF-8");
