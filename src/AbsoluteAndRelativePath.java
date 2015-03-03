@@ -40,7 +40,7 @@ public class AbsoluteAndRelativePath extends HttpServlet {
 		out.println("<!DOCTYPE html>");
 		out.println("<html>");
 		out.println("<head>");
-		out.println("<title>Hello Servlet</title>");
+		out.println("<title>絕對路徑和相對路徑</title>");
 		out.println("</head>");
 		out.println("<body>");
 		out.println("<h1> Hello World! </h1>");

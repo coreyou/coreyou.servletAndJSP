@@ -10,6 +10,14 @@
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
   <servlet>
+    <servlet-name>GetInputSreamServlet</servlet-name>
+    <servlet-class>GetInputSreamServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GetInputSreamServlet</servlet-name>
+    <url-pattern>/GetInputSreamServlet.view</url-pattern>
+  </servlet-mapping>
+  <servlet>  
     <servlet-name>HelloServlet</servlet-name>
     <servlet-class>HelloWorldServlet</servlet-class>
     <init-param>
@@ -68,16 +76,6 @@
       <include-coda>/WEB-INF/jspf/coda.jspf</include-coda>
     </jsp-property-group>
   </jsp-config>
-  <!-- struts2 -->
-  <filter>
-  	<filter-name>struts2</filter-name>
-	<filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
-  </filter>
-  <filter-mapping>
-	<filter-name>struts2</filter-name>
-	<url-pattern>/*</url-pattern>
-  </filter-mapping>
-  <!-- /struts2 -->
   <filter>
     <filter-name>MyFilter</filter-name>
     <filter-class>filter.HelloFilter</filter-class>
