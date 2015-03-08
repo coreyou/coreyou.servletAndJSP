@@ -65,7 +65,7 @@ public class LifeCycleServlet extends HttpServlet {
 	@Override
 	public void init() throws ServletException {
 		// TODO Auto-generated method stub
-//		System.out.println("init()");
+		System.out.println("init()");
 		super.init();
 	}
 
@@ -75,7 +75,7 @@ public class LifeCycleServlet extends HttpServlet {
 	public void service(ServletRequest req, ServletResponse res)
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
-//		System.out.println("service()");
+		System.out.println("service()");
 		super.service(req, res);
 	}
 
@@ -87,7 +87,7 @@ public class LifeCycleServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		
-//		System.out.println("doGet()");
+		System.out.println("doGet()");
 		
 		response.setCharacterEncoding("UTF-8");
 		request.setCharacterEncoding("UTF-8");
@@ -120,7 +120,7 @@ public class LifeCycleServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-//		System.out.println("doPost()");
+		System.out.println("doPost()");
 		
 		response.setCharacterEncoding("UTF-8");
 		request.setCharacterEncoding("UTF-8");
@@ -128,7 +128,7 @@ public class LifeCycleServlet extends HttpServlet {
 		String name = request.getParameter("name");
 		globalName = name;
 		// 如果輸入A，就模擬要做一件很耗時間的事
-		if (globalName.equalsIgnoreCase("A")) {
+		if ("A".equalsIgnoreCase(globalName)) {
 			try {
 				Thread.sleep(10000); //sleep for 10s
 			} catch (InterruptedException e) {
@@ -167,7 +167,7 @@ public class LifeCycleServlet extends HttpServlet {
 	@Override
 	public void destroy() {
 		// TODO Auto-generated method stub
-//		System.out.println("destroy()");
+		System.out.println("destroy()");
 		super.destroy();
 	}
 	
