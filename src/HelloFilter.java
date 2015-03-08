@@ -21,6 +21,8 @@ import java.io.*;
  *    在doFilter()中必須決定是否要觸發filter chain的下一個元件(可能是另一個過濾器或其他WEB資源，例如Servlet、JSP、靜態文件)，或阻絕此次的需求。
  * 5. destroy()，釋放已開啟資源，以及其他清理作業。
  * 
+ * filter的執行順序是定義在web.xml中filter的順序，web.xml中servlet-name定義了此filter影響到哪個servlet。
+ * 
  * @author coreyou
  *
  */
