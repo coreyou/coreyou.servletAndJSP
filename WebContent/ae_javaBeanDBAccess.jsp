@@ -17,7 +17,7 @@
 		Connection con = dbBean.getConnection();
 		
 		// insert
-		String tableName = "user";
+		String tableName = "usertest";
 		String sql = "insert into " + tableName + " values ('6', 'Wang', 'wang@gmail.com')";
 		int updateRows = dbBean.getUpdate(sql);
 		if (updateRows > 0) {
