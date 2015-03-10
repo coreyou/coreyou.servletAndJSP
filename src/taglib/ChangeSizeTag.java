@@ -8,7 +8,7 @@ import javax.servlet.jsp.tagext.SimpleTagSupport;
  * input: num
  * ouput: size
  * 
- * 與web.xml、coreyouTagLib.tld、tagLig_ChangeSizeTag.jsp有關，開啟tagLib_demo.html測試。
+ * 與web.xml、coreyouTagLib.tld、tagLig_ChangeSizeTag.jsp有關，開啟tagLig_ChangeSizeTag.jsp測試。
  * 
  * @author coreyou
  *
