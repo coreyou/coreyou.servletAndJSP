@@ -65,7 +65,7 @@ public class LifeCycleServlet extends HttpServlet {
 	@Override
 	public void init() throws ServletException {
 		// TODO Auto-generated method stub
-		System.out.println("init()");
+		System.out.println("LifeCycleServlet: init()");
 		super.init();
 	}
 
@@ -75,7 +75,7 @@ public class LifeCycleServlet extends HttpServlet {
 	public void service(ServletRequest req, ServletResponse res)
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		System.out.println("service()");
+		System.out.println("LifeCycleServlet: service()");
 		super.service(req, res);
 	}
 
@@ -167,7 +167,7 @@ public class LifeCycleServlet extends HttpServlet {
 	@Override
 	public void destroy() {
 		// TODO Auto-generated method stub
-		System.out.println("destroy()");
+		System.out.println("LifeCycleServlet: destroy()");
 		super.destroy();
 	}
 	

@@ -101,9 +101,73 @@
     <filter-name>AuthFilter</filter-name>
     <servlet-name>AuthFilterTest</servlet-name>
   </filter-mapping>
+  <filter>
+    <filter-name>GZipFilter</filter-name>
+    <filter-class>filter.GZipFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>GZipFilter</filter-name>
+    <servlet-name>GZipTest</servlet-name>
+  </filter-mapping>
+  <filter>
+    <filter-name>WatermarkFilter</filter-name>
+    <filter-class>filter.WaterMarkFilter</filter-class>
+    <init-param>
+    	<param-name>watermarkFile</param-name>
+    	<param-value>/images/errorstate.gif</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>WatermarkFilter</filter-name>
+    <url-pattern>*.png</url-pattern>
+  </filter-mapping>
+  <!-- 
+  <filter>
+    <filter-name>CacheFilter</filter-name>
+    <filter-class>filter.CacheFilter</filter-class>
+    <init-param>
+      <param-name>encode</param-name>
+      <param-value>utf-8</param-value>
+    </init-param>
+    <init-param>
+    	<param-name>cacheTime</param-name>
+    	<param-value>1000000</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>CacheFilter</filter-name>
+    <url-pattern>*.jsp</url-pattern>
+  </filter-mapping>
+   -->
+  <filter>
+    <filter-name>XsltFilter</filter-name>
+    <filter-class>filter.XSLTFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>XsltFilter</filter-name>
+    <url-pattern>/msn/*</url-pattern>
+  </filter-mapping>
+  <filter>
+    <filter-name>UploadFilter</filter-name>
+    <filter-class>filter.UploadFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>UploadFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <listener>
+  	<listener-class>
+  		listener.ListenerTest
+  	</listener-class>
+  </listener>
+  <listener>
+  	<listener-class>
+  		listener.LoginSessionListener
+  	</listener-class>
+  </listener>
   <servlet>
     <servlet-name>PictureVerifyServlet</servlet-name>
-    <servlet-class>PictureVerifyServlet</servlet-class>
+    <servlet-class>pictureVerification.PictureVerifyServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>PictureVerifyServlet</servlet-name>

@@ -9,7 +9,7 @@
 <body>
 	<h2>以EL取得Java Bean屬性</h2>
 	<p>&lt;jsp:useBean&gt;動作標記 + EL的應用</p>
-	<jsp:useBean id="userBean" class="bean.simpleAccessUser"></jsp:useBean>
+	<jsp:useBean id="userBean" class="bean.SimpleAccessUser"></jsp:useBean>
 	<jsp:setProperty property="name" name="userBean" value="Sean"/>
 	<jsp:setProperty property="dept" name="userBean" value="董事長室"/>
 	<h3>測試Java Bean</h3>

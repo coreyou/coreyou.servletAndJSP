@@ -182,11 +182,27 @@
 			<c:set target="${ map_1 }" property="firstProperty" value="firstPropertyValue"></c:set>
 			map_1.firstProperty: ${ map_1.firstProperty }
 		</p>
+		<hr />
 		<h3>c:remove 刪除物件</h3>
 		<p>
 			<c:remove var="map_1" /><!-- c:remove 只有var和scope屬性，var只接受字串，不接受EL，scope可以指定page、request、session、application -->
 			${ map_1 == null ? 'map_1 已經被刪除' : 'map_1 沒有被刪除' }
 		</p>
-		
+		<hr />
+		<h3>c:import 匯入網路資源</h3>
+		<p>
+			<c:import url="https://tw.yahoo.com" charEncoding="utf-8" var="yahoo" scope="request"></c:import>
+			<p>
+				yahoo的原始碼為: <c:out value="${ yahoo }" escapeXml="true"></c:out>
+			</p>
+		</p>
+		<hr />
+		<h3>c:url 如果user瀏覽器不支援cookie，可以使用response.encodeURL()方法對URL進行寫程式，讓他也能使用session功能，這叫做URL重新定義。</h3>
+		<p>
+			<c:url value="/images/errorstate.gif"></c:url>
+		</p>
+		<hr />
+		<h3>c:redirect 重新導向</h3>
+		<c:redirect url="/helloWorldJSP.html"></c:redirect>
 	</body>
 </html>

@@ -9,10 +9,10 @@
 	</head>
 	<body>
 		<%-- 定義一個session範圍的計數器，記錄個人的存取資訊 --%>
-		<jsp:useBean id="personalCount" class="bean.guestCounter" scope="session"></jsp:useBean>
+		<jsp:useBean id="personalCount" class="bean.GuestCounter" scope="session"></jsp:useBean>
 		
 		<%-- 定義一個application範圍的計數器，紀錄所有人的存取資訊(可以開啟不同的瀏覽器來模擬不同人) --%>
-		<jsp:useBean id="allCount" class="bean.guestCounter" scope="application"></jsp:useBean>
+		<jsp:useBean id="allCount" class="bean.GuestCounter" scope="application"></jsp:useBean>
 		<div align="center">
 			<form action="method.jsp" method="get">
 				<fieldset>
